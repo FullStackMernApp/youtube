@@ -30,7 +30,7 @@ module.exports.isDownloaded = (req,res) =>{
         args: [link]
     }
     PythonShell.run('YoutubeDownload.py', options, function (err,result) {
-        console.log(result.toString())
+        console.log(result)
        res.json({
           success:true,
           downloaded:true,
