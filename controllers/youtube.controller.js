@@ -6,7 +6,7 @@ module.exports.downloadFromLinkYoutube  = (req,res) =>{
     }
     let errorMsg =""
         PythonShell.run('test.py', options, function (err,result) {
-            errorMsg = result[0]
+            errorMsg = result.toString()
             console.log(errorMsg);
             if(errorMsg == "Error link or connection failed" ){
         res.status(200).json({
